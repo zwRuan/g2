@@ -1,39 +1,13 @@
 # G2: Guided Generation for Enhanced Output Diversity in LLMs
 
-[![Paper](https://img.shields.io/badge/EMNLP-2025-red)](https://aclanthology.org/)
-[![Code](https://img.shields.io/badge/Code-Available-green)]()
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
-
-![Overview](figure/main.pdf)
+![Overview](figure/main.png)
 
 > **🎉 Accepted at EMNLP 2025 Main Conference**
 
 ## Abstract
 
-Large Language Models (LLMs) have demonstrated exceptional performance across diverse natural language processing tasks. However, these models exhibit a critical limitation in output diversity, often generating highly similar content across multiple attempts. This limitation significantly affects tasks requiring diverse outputs, from creative writing to reasoning. Existing solutions, like temperature scaling, enhance diversity by modifying probability distributions but compromise output quality.
+Large Language Models (LLMs) have demonstrated exceptional performance across diverse natural language processing tasks. However, these models exhibit a critical limitation in output diversity, often generating highly similar content across multiple attempts. This limitation significantly affects tasks requiring diverse outputs, from creative writing to reasoning. Existing solutions, like temperature scaling, enhance diversity by modifying probability distributions but compromise output quality. We propose **Guide-to-Generation** (G2), a training-free plug-and-play method that enhances output diversity while preserving generation quality. G2 employs a base generator alongside dual Guides, which guide the generation process through decoding-based interventions to encourage more diverse outputs conditioned on the original query. Comprehensive experiments demonstrate that G2 effectively improves output diversity while maintaining an optimal balance between diversity and quality.
 
-We propose **Guide-to-Generation (G2)**, a training-free plug-and-play method that enhances output diversity while preserving generation quality. G2 employs a base generator alongside dual Guides, which guide the generation process through decoding-based interventions to encourage more diverse outputs conditioned on the original query. Comprehensive experiments demonstrate that G2 effectively improves output diversity while maintaining an optimal balance between diversity and quality.
-
-## Key Features
-
-- **🚀 Training-free**: No additional model training required
-- **🔧 Plug-and-play**: Compatible with existing LLMs
-- **🎯 Dual Guide System**: 
-  - **Diversity Guide**: Encourages generation of novel responses
-  - **Dedupe Guide**: Prevents repetition of previous outputs
-- **⚖️ Quality Preservation**: Maintains generation quality while enhancing diversity
-- **🧠 Entropy-based Control**: Intelligent token-level intervention based on entropy thresholds
-
-## How G2 Works
-
-G2 addresses the diversity limitation through an innovative dual-guide approach:
-
-1. **Base Generation**: Standard LLM generates initial response
-2. **Guide Intervention**: Dual guides modify logit distributions at each decoding step
-   - Diversity Guide promotes novel token selections
-   - Dedupe Guide suppresses previously generated patterns
-3. **Entropy Weighting**: Intervention strength is controlled by entropy-based thresholds
-4. **Iterative Process**: Multiple diverse outputs are generated through guided iterations
 
 ## Project Structure
 
