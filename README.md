@@ -82,7 +82,7 @@ If you find this work useful, please cite our paper:
 @inproceedings{g2-guided-generation-2025,
     title={G2: Guided Generation for Enhanced Output Diversity in LLMs},
     author={Zhiwen Ruan and Yixia Li and Yefeng Liu and Yun Chen and Weihua Luo and Peng Li and Yang Liu and Guanhua Chen},
-    booktitle={Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing},
+    booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
     year={2025},
     publisher={Association for Computational Linguistics}
 }
