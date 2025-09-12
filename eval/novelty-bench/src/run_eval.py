@@ -9,7 +9,8 @@ import random
 import evaluate
 from datasets import load_dataset, Dataset
 import sys
-# sys.path.append("/your_path/g2")
+# Add your path here sys.path.append("/your_path/g2")
+sys.path.append("/workspace/CODE/g2")
 from eval.utils import (
     generate_completions,
     load_lm_and_tokenizer,
@@ -178,7 +179,7 @@ def main():
     parser.add_argument(
         "--top_k",
         type=int,
-        default=0,
+        default=50,
     )
     parser.add_argument(
         "--threshold",

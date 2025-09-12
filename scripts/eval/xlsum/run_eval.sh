@@ -1,8 +1,8 @@
-temperature=1.0
-weight_method="entropy"
+export CUDA_VISIBLE_DEVICES=0
+
+
 theta=0.3
-top_p=1.0
-top_k=50
+temperature=1.0
 
 python -m eval.xlsum.run_eval \
         --save_dir results/xlsum/theta${theta}_temp${temperature} \
@@ -10,7 +10,3 @@ python -m eval.xlsum.run_eval \
         --eval_batch_size 5 \
         --temperature $temperature \
         --theta ${theta} \
-        --alpha 0.5 \
-        --weight_method $weight_method \
-        --top_p $top_p \
-        --top_k $top_k 

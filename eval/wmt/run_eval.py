@@ -546,7 +546,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--weight_method",
         type=str,
-        default=None,
+        default="entropy",
         help="if specified, we will load the model to generate the predictions."
     )
     parser.add_argument(
@@ -588,13 +588,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--top_k",
         type=int,
-        default=None,
+        default=50,
         help="The model revision to load.",
     )
     parser.add_argument(
         "--top_p",
         type=float,
-        default=1,
+        default=1.0,
         help="The model revision to load.",
     )
     args = parser.parse_args()

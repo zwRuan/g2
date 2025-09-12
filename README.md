@@ -61,7 +61,7 @@ bash scripts/eval/novelty/run_eval.sh 0.3
 
 If you want to evaluate additional diversity metrics such as sentence-BERT, self-BLEU, and EAD, please execute:
 ```
-conda activate eval_g2
+conda activate g2_eval
 python eval/calculate_div.py --file outputfile=results/novelty/g2_theta0.3_temp1/generations.jsonl --task curated
 ```
 
