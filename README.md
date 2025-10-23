@@ -47,7 +47,15 @@ pip install -r g2_eval_requirements.txt
 ```
 
 # Evaluation
-We provide generation and evaluation scripts for each benchmark under scripts. Taking WMT as an example: run_eval.sh evaluates our method; run_sample.sh evaluates sampling-based methods (temperature, top-k, top-p, min-p); diversity evaluates the diversity of the model’s outputs.
+We provide generation and evaluation scripts for each benchmark under `scripts`.  
+Taking WMT as an example: `run_eval.sh` evaluates our method; `run_sample.sh` evaluates sampling-based methods (temperature, top-k, top-p, min-p); `diversity.sh` evaluates the diversity of the model’s outputs.  
+
+👉 The datasets used in each benchmark can be found in the corresponding `run_eval.py`.  
+For instance, in `eval/wmt/run_eval.py` (line 172–173):  
+```python
+dataset = load_dataset("wmt14", "de-en") 
+test_data = dataset["test"]
+
 
 ## WMT'14 GE->EN
 
