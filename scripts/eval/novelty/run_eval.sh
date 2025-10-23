@@ -1,6 +1,6 @@
 export CUDA_VISIBLE_DEVICES=0
 
-theta=$1
+theta=0.3
 iter_num=10
 temperature=1
 python_file=run_eval.py

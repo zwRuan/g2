@@ -47,22 +47,28 @@ pip install -r g2_eval_requirements.txt
 ```
 
 # Evaluation
+We provide generation and evaluation scripts for each benchmark under scripts. Taking WMT as an example: run_eval.sh evaluates our method; run_sample.sh evaluates sampling-based methods (temperature, top-k, top-p, min-p); diversity evaluates the diversity of the model’s outputs.
 
-## NoveltyBench Evaluation
+## WMT'14 GE->EN
 
 For diversity and quality scores on NoveltyBench, you can use the following scripts:
 ```
+# g2
 conda activate g2
-bash scripts/eval/novelty/run_eval.sh 0.3
-```
+bash scripts/eval/wmt/run_eval.sh
 
+# sample methods
+conda activate g2
+bash scripts/eval/wmt/run_sample.sh
+```
+This code will create a directory containing JSONL files for the outputs from five sampling runs, as well as an all_metrics.json file with the BLEU and COMET for each run.
 
 ## Additional Diversity Metrics
 
-If you want to evaluate additional diversity metrics such as sentence-BERT, self-BLEU, and EAD, please execute:
+If you want to evaluate diversity metrics such as sentence-BERT, self-BLEU, and EAD (Expectation-Adjusted Distinct Ngrams), please execute:
 ```
 conda activate g2_eval
-python eval/calculate_div.py --file outputfile=results/novelty/g2_theta0.3_temp1/generations.jsonl --task curated
+bash scripts/eval/wmt/diversity.sh
 ```
 
 
