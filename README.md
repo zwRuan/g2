@@ -51,7 +51,7 @@ We provide generation and evaluation scripts for each benchmark under scripts. T
 
 ## WMT'14 GE->EN
 
-For diversity and quality scores on NoveltyBench, you can use the following scripts:
+For diversity and quality scores on WMT'14 GE->EN, you can use the following scripts:
 ```
 # g2
 conda activate g2
