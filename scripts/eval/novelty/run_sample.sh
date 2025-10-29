@@ -1,12 +1,11 @@
 # this scripts use vllm to run_sample
 # if you want use transformers, please change "eval/novelty-bench/src/inference.py" to "eval/novelty-bench/src/run_sample.py"
-
-source activate g2
+export CUDA_VISIBLE_DEVICES=0
 top_p=1.0
 top_k=50
 min_p=0
 iter_num=10
-temperature=1
+temperature=1.5
 
 outputfile=results/novelty/g2_theta${theta}_temp${temperature}
 model=meta-llama/Meta-Llama-3-8B-Instruct

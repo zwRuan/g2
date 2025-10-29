@@ -1,5 +1,4 @@
 export CUDA_VISIBLE_DEVICES=0
-
 theta=0.3
 iter_num=10
 temperature=1

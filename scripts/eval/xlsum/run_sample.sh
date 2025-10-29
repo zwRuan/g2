@@ -1,6 +1,5 @@
-source activate g2
 export CUDA_VISIBLE_DEVICES=0
-temperature=1.0
+temperature=1.5
 top_p=1.0
 top_k=50
 min_p=0
