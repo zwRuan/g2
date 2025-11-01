@@ -45,6 +45,7 @@ conda activate g2_eval
 pip install torch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 --index-url https://download.pytorch.org/whl/cu121
 pip install -r g2_eval_requirements.txt
 ```
+> **Note**: The reason we use two separate conda environments is that the code used for evaluating diversity metrics (such as self-BLEU, EAD, and Sentence-BERT) references the open-source project [RLHF Gen Diversity](https://github.com/facebookresearch/rlhf-gen-div), which relies on `sentence-transformers`. This library conflicts with the `transformers` library used in the G2 model, so we isolate the two environments to avoid conflicts.
 
 # Evaluation
 We provide generation and evaluation scripts for each benchmark under `scripts`.  
@@ -85,6 +86,7 @@ bash scripts/eval/wmt/diversity.sh
 We thank the excellent open-source libraries including:
 - [Proxy-tuning](https://github.com/alisawuffles/proxy-tuning)
 - [NoveltyBench](https://github.com/novelty-bench/novelty-bench)
+- [RLHF Gen Diversity](https://github.com/facebookresearch/rlhf-gen-div) for their implementation of diversity metrics (sentence-BERT, self-BLEU, EAD) which contributed to our evaluation framework.
 
 And other outstanding works that contributed to this research.
 
